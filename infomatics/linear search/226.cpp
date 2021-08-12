@@ -1,15 +1,14 @@
-// Задача №224. Линейный поиск - 2
+// Задача №226. Линейный поиск - 3
 
 #include <iostream>
+#include <cmath>
 using namespace std;
 
-bool linear_search(int *arr,int size, int num){
-    int cnt = 0;
+void linear_search(int *arr,int size, int num){
     for(int i = 0; i < size; i++){
         if(arr[i] == num)
-           return true;
-    }
-    return false;
+            cout<<i+1<<" ";
+        }
 }
 
 int main(){
@@ -23,11 +22,7 @@ int main(){
     cin >> num;
 
     
-    if (linear_search(arr, size, num)){
-        cout<<"YES";
-    }
-    else
-        cout<<"NO";
+    linear_search(arr, size, num);
 
     return 0;
 }
